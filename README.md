@@ -2,6 +2,9 @@
 
 native web app to display and to interact in real time with complex numbers sets
 
+### demo
+demo url: https://bronze-cori-43.tiiny.site
+
 ### features
 * real time high quality rendering of fractels
 * support for number of fractals includeing their julia sets
