@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canvas Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="overflow: hidden;">
+  <canvas id="canves" width="400" height="400" style="position: absolute; top: 0px; left: 0px;"></canvas>
+  
+  
+  <div id="side_menu" style="position: absolute;">
+    <!--<div id="fractels_menu" class="blob">
+      <label id="fractel_name" ></label>
+      <div id="fractel_choose" class="sub_blob">
+
+      </div>
+    </div>
+    <div id="colors_menu" class="blob">
+      <label id="colors_name" ></label>
+        <div id="colors_choose" class="sub_blob" >
+
+      </div>
+    </div>
+    <div id="side_menu_line1"style="width: 100%; height: 10px; background-color: black; "></div>
+    <button id="reset_location" ></button>-->
+
+
+    <div id="view_board" class="blob">
+      <label  id="fractel_name" ></label>
+      <button onclick="loadFractelChooser(false)">change</button>
+      <br>
+      <label id="colors_name" ></label>
+      <button onclick="loadFractelChooser(true)">change</button>
+    </div>
+    
+    <div id="rendering" class="blob">
+      <h2 style="text-align: center; margin-top: 0px; margin-bottom: 5px;">rendering</h2>
+      <hr style="margin: 5px;">
+      <div id="rendering_data">
+        <label id="iterations_label" style="font-size: large;">iterations: <b>200</b></label><br>
+        <label id="loadtime_label" style="font-size: large;">load time: <b>200</b></label><br>
+        <label id="movefps_label" style="font-size: large;">move fps:  <b>unknown</b></label><br>
+        <label id="usegpu_label" style="font-size: large;">use: <b>cpu<b></label>
+        <hr>
+      </div>
+      <div id="quality_checkbox_div"><label style="font-size: large; font-weight: bold;"><input id="quality_checkbox" type="checkbox" onchange="rend.updateQuality(QUALITY_CHECKBOX.checked?3:1)"> high quality</label></div>
+      <div id="rendering_inputs">
+        <div><input id="usegpu_checkbox" type="checkbox" onchange="rend.use_gpu = document.getElementById('usegpu_checkbox').checked; rend.full_render();" checked> <label style="font-size: large; font-weight: bold;"><b>use gpu</b></label></div>
+        <!--<label style="font-weight: bold;">grid size</label>
+        <input type="range" id="grid_size_slider" min="1" max="20" step="1" value="9" oninput="document.getElementById('grid_size_value_label').innerHTML = document.getElementById('grid_size_slider').value" onchange="GRID_SQUARE_SIZE = document.getElementById('grid_size_slider').value; rend.full_render();">
+        <label id="grid_size_value_label">9</label>-->
+      </div>
+      <button id="advance_mode_button" style="width: 70%; margin-left: 15%; height: 40px;">advanced mode</button>
+    </div>
+
+    <div id="general_buttons" class="blob">
+      <button id="save_button">save</button>
+    </div>
+
+  </div>
+  <div id="bottom_menu" style="width: 100%; bottom: 0px; left:0px; position: absolute; display: flex;">
+    <div id="bottom_blob_1" class="bottom_blob" style="width: 240px;">
+        <label id="mouse_x_label">mouse x: </label><br>
+        <label id="mouse_y_label">mouse y: </label><br>
+        <label id="mouse_location">mouse n: </label>
+    </div>
+    <div id="bottom_blob_2" class="bottom_blob">
+      <label id="fractel_width">mouse x: </label><br>
+      <label id="fractel_height">mouse y: </label><br>
+      <label id="fractel_loc_x">mouse n: </label><br>
+      <label id="fractel_loc_y">mouse n: </label>
+    </div>
+  </div>
+
+  <div id="center_div" style="position: absolute; width: 60%; height: 60%; top: 20%; left: 20%; border-radius: 30px; background-color: white; border-style: solid; opacity: 0.95; overflow: hidden; visibility: hidden;">
+    <div style="border-bottom-style: solid;">
+      <button id="center_div_exit" style="position: absolute; top: 0px; right: 0px; margin: 1%; " onclick="hideCenterDiv()">X</button>
+    <h2 id="center_div_title" style="margin-left: 2%; margin-top: 1%; margin-bottom: 1%;">hello</h2> 
+    </div> 
+    <div id="center_div_contant" style="width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; overflow: auto;">
+
+    </div>
+  </div>
+
+  <script src="MathP.js"></script>
+  <script src="gpu.js"></script>
+  <script src="Fractel.js"></script>
+  <script src="UI.js"></script>
+  <script src="Graphic.js" ></script>
+  <script src="Input.js"></script>
+</body>
+</html>

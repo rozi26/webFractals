@@ -1,0 +1,65 @@
+
+label
+{
+    user-select: none;
+    font-style: normal;
+    font-family: "Arial", sans-serif;
+    text-align: left;
+}
+
+button
+{
+    font-weight: bold;
+    font-family: "Arial", sans-serif;
+    border-radius: 30px;
+    margin: 5%;
+    transition-duration: 100ms;
+}
+button:hover
+{
+    background-color: aquamarine;
+    transform: scale(1.4);
+    transition-duration: 100ms;
+}
+
+h1,h2,h3
+{
+    font-weight: bold;
+    font-family: "Arial", sans-serif;
+}
+
+input[type="checkbox"] {
+    background-color: blue;
+}
+
+.blob
+{
+    border-radius: 15px;
+    width: 80%;
+    margin: 5%;
+    padding: 5%;
+    background-color: gray;
+    border-style: solid;
+    border-color: black;
+    overflow: hidden;
+}
+.sub_blob
+{
+    height:100px;
+    width:100%;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 5%;
+    overflow: auto;
+    border: solid;
+}
+
+.bottom_blob
+{
+    border-radius: 15px;
+    height: 80px;
+    margin: 5px;
+    padding: 5px;
+    width: max-content;
+    background-color: gray;
+}
