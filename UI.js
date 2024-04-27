@@ -266,7 +266,7 @@ const SLIDER_KIT_1 =  getSlideBar("grid size",1,100,9)
 RENDERING_INPUTS.appendChild(SLIDER_KIT_1[0])
 SLIDER_KIT_1[2].addEventListener("change",(event)=>{GRID_SQUARE_SIZE = SLIDER_KIT_1[2].value; rend.full_render();})
 
-const SLIDER_KIT_2 =  getSlideBar("min quality",10,200,75)
+const SLIDER_KIT_2 =  getSlideBar("min quality",1,200,75)
 RENDERING_INPUTS.appendChild(SLIDER_KIT_2[0])
 SLIDER_KIT_2[2].addEventListener("change",(event)=>{MIN_QUALITY = SLIDER_KIT_2[2].value; rend.updateQuality(QUALITY_LEVEL);})
 
